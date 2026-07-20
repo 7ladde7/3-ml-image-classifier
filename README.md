@@ -15,7 +15,7 @@
 
 ## Установка и команды
 ```bash
-git clone https://github.com/7ladde7/repo/ml-finetune-image-classifier
+git clone https://github.com/7ladde7/ml-finetune-image-classifier.git
 cd ml-finetune-image-classifier
 ```
 
