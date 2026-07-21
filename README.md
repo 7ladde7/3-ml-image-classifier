@@ -15,8 +15,8 @@
 
 ## Установка и команды
 ```bash
-git clone https://github.com/7ladde7/ml-finetune-image-classifier.git
-cd ml-finetune-image-classifier
+git clone https://github.com/7ladde7/ml-image-classifier.git
+cd ml-image-classifier
 ```
 
 Запуск в **Docker**:
@@ -29,6 +29,12 @@ python -m train.evals
 Открыть в браузере: [http://localhost:3000](http://localhost:3000)
 
 ## Метрики
+Метрики обучения на разном количестве данных. Для сравнения добавлены **CNN** и **ResNet18_scratch**:
+
+- **CNN** - классический алгоритм сверточной нейронной сети со случайно инициализированными весами
+- **ResNet18_scratch** - нейронная сеть **ResNet18**, обучение происходило с нуля
+- **ResNet18_finetuned** - fine-tuning **ResNet18** с предобученными весами (**transfer learning**)
+
 Ключевые результаты:
 | модель                         | samples | tr_loss | tr_acc | val_loss | val_acc | recall | precision | f1   |
 |------------------------------|--------:|--------:|--------:|----------:|--------:|--------:|----------:|------:|
@@ -42,11 +48,7 @@ python -m train.evals
 | ResNet18_scratch             | 1000    | 0.51    | 0.75    | 0.62      | 0.67    | 0.74    | 0.66      | 0.70 |
 | ResNet18_finetuned           | 1000    | 0.07    | 0.97    | 0.03      | 0.98    | 0.98    | 0.97      | 0.97 |
 
-- **CNN** - классический алгоритм сверточной нейронной сети со случайно инициализированными весами.
-- **ResNet18_scratch** - нейронная сеть **ResNet18**, обучение с нуля.
-- **ResNet18_finetuned** - fine-tuning **ResNet18** на предобученных весах (**transfer learning**).
-
 ## Лицензия
 **MIT**
 
-Проект создан исключительно для образовательных целей.
+Проект создан исключительно для образовательных целей
